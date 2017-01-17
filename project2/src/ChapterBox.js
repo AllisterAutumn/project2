@@ -5,11 +5,12 @@ class ChapterBox extends Component {
 
   render(){
     this.props.chapterData;
-    this.props.chapterId;
+    this.props.chapterNum;
 
     return (
       <div>
           <li>{this.chapterData}</li>
+          <button onClick={()=>{axios.delete(`https://project2-a12a5.firebaseio.com/story/${this.chapterNum}/title/.json`)}}>X</button>
       </div>
     )
   }
@@ -17,7 +18,7 @@ class ChapterBox extends Component {
 
 ChapterBox.propTypes = {
   chapterData: React.PropTypes.object.isRequired,
-  chapterId: React.PropTypes.string.isRequired
+  chapterNum: React.PropTypes.string.isRequired
 
 }
 

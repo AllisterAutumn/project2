@@ -53,9 +53,8 @@ addStory(textVal) {
   render() {
      let book = Object.keys(this.state.story).map((chapterId,index)=>{
         let chapterData = this.state.story[chapterId];
-        let chapterSection = chapterData.title;
           return (
-              <ChapterBox chapterData={chapterData.title} />
+              <ChapterBox chapterData={chapterData.title} chapterId={chapterId}/>
 
         )
     })
