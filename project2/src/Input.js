@@ -13,7 +13,7 @@ console.log(textarea);
 render(){
 
   return (
-    <div className="placemat">
+    <div>
       <textarea  id="textarea" > </textarea>
       <br/>
       <button id="write" type="submit" onClick={() => this.makeChapter()}>Write</button>
