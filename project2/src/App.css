@@ -6,12 +6,6 @@ header {
   font-size: 20pt;
 }
 
-iframe {
-  background-color: white;
-   position: relative;
-    background-color: rgba(125, 125, 125, 0.72);
-
-}
 
 body {
   background-image: url(background.jpg);
@@ -40,12 +34,14 @@ body {
 #edit {
   width: 200px;
   height: 50px;
+  font-family: courier;
+  font-size: 10pt;
 
 
 }
 
 .placemat {
-  background-color:rgba(6, 65, 52, 0.51);
+  background-color:rgba(160, 153, 49, 0.5);
   width: 600px;
   display: flex;
   justify-content: center;

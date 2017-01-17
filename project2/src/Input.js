@@ -8,14 +8,14 @@ class Input extends Component {
     console.log(textValue);
   }
 
-  render(){
-    return (
-      <div>
-        <textarea  id="textarea" ref="textArea"></textarea>
-        <br/>
-        <button id="write" type="submit" onClick={() => this.makeChapter()}>Write</button>
-      </div>
-    )
+render(){
+  return (
+    <div>
+      <textarea  id="textarea" ref="textArea"> </textarea>
+      <br/>
+      <button id="write" type="submit" onClick={() => this.makeChapter()}>Write</button>
+    </div>
+  )
   }
 }
 

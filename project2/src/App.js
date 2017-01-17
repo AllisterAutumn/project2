@@ -11,10 +11,13 @@ class App extends Component {
     this.state = {story: "" }
     this.addStory = this.addStory.bind(this);
     this.addChapterButton = this.addChapterButton.bind(this);
+    this.deleteChapter = this.deleteChapter.bind(this);
+    this.editChapter = this.editChapter.bind(this);
   }
 
 componentDidMount() {
     this.getStory();
+
 
   }
 
@@ -25,7 +28,7 @@ componentDidMount() {
       method: "GET"
     }).then((response) => {
         console.log(response.data);
-        this.setState({story: response.data});
+        this.setState({story: response.data || {} });
     }).catch((error) => {
         console.log(error);
 
@@ -34,10 +37,14 @@ componentDidMount() {
 
   editChapter(chapterId, text) {
     //axios call
+    axios.put(`https://project2-a12a5.firebaseio.com/story/${chapterId}/title/.json`, [text]);
   }
 
   deleteChapter(chapterId) {
-    //axios call
+    axios.delete(`https://project2-a12a5.firebaseio.com/story/${chapterId}/title/.json`)
+             .then(() => {
+                this.getStory();
+             });
   }
 
 addStory(textVal) {
@@ -63,7 +70,7 @@ addStory(textVal) {
      let book = Object.keys(this.state.story).map((chapterId,index)=>{
         let chapterData = this.state.story[chapterId];
           return (
-              <ChapterBox chapterData={chapterData.title} chapterId={chapterId}/>
+              <ChapterBox chapterData={chapterData.title} chapterId={chapterId} deleteChapter={this.deleteChapter} editChapter={this.editChapter}/>
           )
     })
 
@@ -77,4 +84,4 @@ addStory(textVal) {
   }
 }
 
-export default App;
+export default App;;
