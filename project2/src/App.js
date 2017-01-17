@@ -15,6 +15,7 @@ class App extends Component {
 
 componentDidMount() {
     this.getStory();
+
   }
 
   getStory() {
@@ -29,6 +30,14 @@ componentDidMount() {
         console.log(error);
 
     });
+  }
+
+  editChapter(chapterId, text) {
+    //axios call
+  }
+
+  deleteChapter(chapterId) {
+    //axios call
   }
 
 addStory(textVal) {
