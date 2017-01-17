@@ -5,12 +5,15 @@ class ChapterBox extends Component {
 
   render(){
     this.props.chapterData;
-    this.props.chapterNum;
+    this.props.chapterId;
+    this.props.title;
 
     return (
       <div>
-          <li>{this.chapterData}</li>
-          <button onClick={()=>{axios.delete(`https://project2-a12a5.firebaseio.com/story/${this.chapterNum}/title/.json`)}}>X</button>
+        <button  onClick={()=> {axios.put(`https://project2-a12a5.firebaseio.com/story/${this.chapterId}/title/.json`, [this.refs.edit.value])}}>edit</button>
+        <input  ref="edit" placeholder={this.chapterData} />
+        <li>{this.chapterData}</li>
+        <button onClick={()=>{axios.delete(`https://project2-a12a5.firebaseio.com/story/${this.chapterId}/title/.json`)}}>X</button>
       </div>
     )
   }
@@ -18,7 +21,7 @@ class ChapterBox extends Component {
 
 ChapterBox.propTypes = {
   chapterData: React.PropTypes.object.isRequired,
-  chapterNum: React.PropTypes.string.isRequired
+  chapterId: React.PropTypes.string.isRequired
 
 }
 
