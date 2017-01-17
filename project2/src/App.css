@@ -1,24 +1,47 @@
-.App {
-  text-align: center;
+header {
+height: 40px;
+font-family: courier;
+width: 100%;
+text-align: center;
+font-size: 20pt;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+iframe {
+background-color: white;
+ position: relative;
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  background-color: rgba(125, 125, 125, 0.72);
+}
+body {
+
+  background-image: url(http://ineffable-words.com/wp-content/uploads/2015/05/old-desk-and-chair-with-typewriter-black-and-white-by-500px-twice-size.jpg);
+  background-size: cover;
+  background-position: fixed;
+  font-family: courier;
+  display: flex;
+justify-content: center;
+}
+textarea {
+  width: 400px;
+  height: 300px;
+  background-color: black;
   color: white;
+  font-size: 15pt;
+  justify-content: center;
+  outline: none;
 }
+.placemat {
+background-color:rgba(6, 65, 52, 0.51);
+width: 600px;
 
-.App-intro {
-  font-size: large;
+justify-content: center;
+flex-direction: column;
 }
+#write {
+background-color: grey;
+width: 100px;
+height: 50px;
+margin-left: 250px;
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
 }

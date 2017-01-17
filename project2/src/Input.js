@@ -13,9 +13,10 @@ console.log(textarea);
 render(){
 
   return (
-    <div>
+    <div className="placemat">
       <textarea  id="textarea" > </textarea>
-      <button type="submit" onClick={() => this.makeChapter()}>Write</button>
+      <br/>
+      <button id="write" type="submit" onClick={() => this.makeChapter()}>Write</button>
      </div>
     )
   }

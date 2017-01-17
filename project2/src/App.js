@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import Input from './Input';
-import StoryBox from './StoryBox';
+
 
 
 class App extends Component {
@@ -55,24 +55,29 @@ addChapterButton(textVal) {
 
 
 
-  render(books) {
+  render() {
 
         let chapter = this.state.story;
         let book = Object.keys(chapter).map((data,i)=>{
           return (
             <div>
-          <li key={i}>{data}</li>
 
-          <button key={-i} onClick={()=>{
-            axios.delete(`https://project2-a12a5.firebaseio.com/${data}.json`)}}>X</button>
+            <button  onClick={()=> {axios.put(`https://project2-a12a5.firebaseio.com/story/${data}/title/.json`, [document.getElementById('edit').value])}}>edit</button>
+            <input  id="edit" placeholder={data} />
+          <iframe key={i} src={`https://project2-a12a5.firebaseio.com/story/${data}/title/.json`}></iframe>
+
+          <button onClick={()=>{axios.delete(`https://project2-a12a5.firebaseio.com/story/${data}/.json`)}}>X</button>
+
           </div>
           )
         })
     return (
       <div>
+      <header>tell (y)our  story</header>
+     <div className="placemat"> {book}</div>
       <Input addChapterButton={this.addChapterButton}/>
-      <StoryBox details={this.state.story} />
-      <ul>{book}</ul>
+
+
       </div>
     )
   }
