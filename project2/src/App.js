@@ -55,14 +55,13 @@ addStory(textVal) {
         let chapterData = this.state.story[chapterId];
           return (
               <ChapterBox chapterData={chapterData.title} chapterId={chapterId}/>
-
-        )
+          )
     })
 
     return (
       <div>
         <header>tell (y)our  story</header>
-        <div className="placemat">{book}</div>
+        <ul className="placemat">{book}</ul>
         <Input addChapterButton={this.addChapterButton}/>
       </div>
     )
