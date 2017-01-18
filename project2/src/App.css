@@ -6,7 +6,6 @@ header {
   font-size: 20pt;
 }
 
-
 body {
   background-image: url(background.jpg);
   background-size: cover;
@@ -15,7 +14,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
 
 #textarea {
   width: 400px;
@@ -28,7 +26,6 @@ body {
   justify-content: center;
   margin-left: 100px;
   margin-top: 100px;
-
 }
 
 #edit {
@@ -36,8 +33,6 @@ body {
   height: 50px;
   font-family: courier;
   font-size: 10pt;
-
-
 }
 
 .placemat {
@@ -55,20 +50,17 @@ body {
   height: 50px;
   margin-left: 250px;
 }
+
  ul {
   list-style: none;
-
  }
+
+
  li {
   width: 90%;
   height: 200px;
   background-color: rgba(0, 0, 0, 0.74);
   color: white;
   font-family: courier;
-
  }
- input {
 
-
-
- }

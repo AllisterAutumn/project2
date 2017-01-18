@@ -3,6 +3,9 @@ import axios from 'axios';
 
 class ChapterBox extends Component {
 
+  //The handleEdit and handleDelete function were both created to hold the primary edit and delete functions
+  //in app.js
+
   handleEdit() {
     console.log(this.props.chapterId, this.refs.edit.value);
     this.props.editChapter(this.props.chapterId, this.refs.edit.value);
@@ -10,9 +13,10 @@ class ChapterBox extends Component {
 
   handleDelete() {
     this.props.deleteChapter(this.props.chapterId);
-
   }
 
+//The functions are then passed into the buttons and textarea using the fat arrow function
+//so that there isn't a scoping error.
   render(){
     return (
       <div>
