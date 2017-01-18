@@ -37,7 +37,11 @@ componentDidMount() {
 
   editChapter(chapterId, text) {
     //axios call
-    axios.put(`https://project2-a12a5.firebaseio.com/story/${chapterId}/title/.json`, [text]);
+    axios.put(`https://project2-a12a5.firebaseio.com/story/${chapterId}/title/.json`, [text])
+    .then(()=>{
+    this.getStory();
+
+    })
   }
 
   deleteChapter(chapterId) {

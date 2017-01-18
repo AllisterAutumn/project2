@@ -20,7 +20,7 @@ class ChapterBox extends Component {
 
     return (
       <div>
-        <button  onClick={this.handleEdit}>edit</button>
+        <button  onClick={()=>{this.handleEdit()}}>edit</button>
         <textarea id="edit" ref="edit"  >{this.props.chapterData}</textarea>
         <button onClick={()=>{this.handleDelete()}} >X</button>
         <li>{this.props.chapterData}</li>
