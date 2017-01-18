@@ -41,8 +41,9 @@ body {
 }
 
 .placemat {
-  background-color:rgba(160, 153, 49, 0.5);
+  background-color:rgba(150, 129, 44, 0.43);
   width: 600px;
+  height: 400px;
   display: flex;
   justify-content: center;
   flex-direction: column;
