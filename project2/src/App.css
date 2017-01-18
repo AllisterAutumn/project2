@@ -38,7 +38,6 @@ body {
 .placemat {
   background-color:rgba(150, 129, 44, 0.43);
   width: 600px;
-  height: 60%;
   display: flex;
   justify-content: center;
   flex-direction: column;

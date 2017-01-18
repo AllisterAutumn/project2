@@ -8,6 +8,7 @@ class Input extends Component {
     let textValue = this.refs.textArea.value;
     this.props.addChapterButton(textValue);
     console.log(textValue);
+    this.refs.textArea.value = " ";
   }
 
 render(){
