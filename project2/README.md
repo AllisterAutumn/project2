@@ -1,7 +1,7 @@
  #Project 2
  ##(y)Our Story
 
- ![image of website]( /images/one.png);
+ ![image of website]( one.png);
 
 
  Be part of a world-wide story. Add a 'chapter' to the website 
@@ -10,7 +10,7 @@
 
 The end and beginning of the story are all decided by the users, and it is all anonymous.
 
- ![image of website]( /images/two.png); 
+ ![image of website]( two.png); 
 
 To make this app I used React, JSX, and CSS on Sublime Text Editor. I also 
 used flexbox to style the components. 
